@@ -1,7 +1,7 @@
 <p align="center"><a href="https://ftp-sync.github.io" target="_blank"><img width="100" src="https://ftp-sync.github.io/img/logo.png"></a></p>
 
 <p align="center">
-  <a href="https://travis-ci.org/ftp-sync/ftp-sync.github.io"><img src="https://img.shields.io/travis/ftp-sync/ftp-sync.github.io/master.svg?style=flat-square" alt="Build Status"></a>
+  <a href="https://travis-ci.org/ftp-sync/ftp-sync.github.io"><img src="https://img.shields.io/travis/ftp-sync/ftp-sync.github.io/dev.svg?style=flat-square" alt="Build Status"></a>
   <a href="https://www.codacy.com/app/ftp-sync/ftp-sync.github.io"><img src="https://img.shields.io/codacy/grade/20c303b459534d7ead9ae0c8d946bacd.svg?style=flat-square" alt="Code Quality"></a>
   <a href="https://gemnasium.com/github.com/ftp-sync/ftp-sync.github.io"><img src="https://img.shields.io/gemnasium/ftp-sync/ftp-sync.github.io.svg?style=flat-square" alt="Gemnasium"></a>
   <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6EALX9NDSRBAJ"><img src="https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square" alt="Donate Paypal"></a>
