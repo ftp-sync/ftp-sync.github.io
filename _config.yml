@@ -1,0 +1,192 @@
+# General
+source: src
+destination: web
+url: "https://ftp-sync.github.io"
+baseurl: ""
+title: "FTP Sync"
+description: "Portable WAMP software stack"
+logo: /img/logo.png
+version: 1.0
+paypal-button-id: "7NFD44VBNE3VL"
+flattr-username: "crazymax"
+
+# Compress HTML
+compress_html:
+  ignore:
+    envs:
+      - "development"
+
+# Github
+github:
+  baseurl: https://github.com
+  user: ftp-sync
+  repo: ftp-sync
+
+# Paths
+paths:
+  assets: assets
+  bower: bower_components
+
+# Assets
+assets:
+  app: assets_app.json
+  vendor: assets_vendor.json
+
+# Filters
+filters:
+  css:
+    - src/css/**/*.css
+  js:
+    - src/js/**/*.js
+  data:
+    - src/_data/**/*.json
+  jekyll:
+    - src/**/*.html
+    - src/**/*.md
+    - src/_data/**/*
+    - src/_plugins/**/*.rb
+    - src/feed.xml
+    - src/feed.xslt.xml
+    - src/robots.txt
+    - src/sitemap.xml
+    - src/sitemap.xsl
+
+# Navigation bar
+navbar:
+  logo: "img/logo.png"
+  links:
+    News: "news"
+    Get started: "doc/get-started"
+    Documentation: "doc"
+    Donate: "donate"
+    Github: "https://github.com/ftp-sync/ftp-sync"
+
+# Author
+author:
+  name: Cr@zy
+  email:
+  facebook: crazyws.fr
+  github: crazy-max
+  twitter: crazyws
+  reddit:
+  google-plus: 106054122073793220041
+  linkedin:
+  xing:
+  stackoverflow:
+  snapchat:
+  instagram:
+  youtube:
+  spotify:
+  telephone:
+
+# Footer
+footer:
+  links-active:
+    rss: true
+    facebook: true
+    email: false
+    twitter: true
+    google-plus: true
+    github: true
+    reddit: false
+    linkedin: false
+    xing: false
+    stackoverflow: false
+    snapchat: false
+    instagram: false
+    youtube: false
+    spotify: false
+    telephone: false
+
+# SEO Related
+google_site_verification: "zczpYiFTLpd1jgOb3K5zGqERX2gZrkm7aRjtDqxP0a4"
+bing_site_verification: "D188E0BEC1AB6E7C1E0194BFC35D0033"
+alexa_site_verification:
+yandex_site_verification:
+
+# Ads
+ads-enabled: true
+
+# Posts
+share-links-active:
+  twitter: true
+  facebook: true
+  google: true
+  linkedin: true
+  reddit: true
+excerpt_length: 25
+timezone: "Europe/Paris"
+permalink: /news/:year-:month-:day-:title/
+tag_page: /news/tags/
+paginate_path: /news/page:num/
+paginate: 5
+
+# Comments
+comments:
+  provider: # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
+  disqus:
+    shortname: # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+  discourse:
+    server: # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
+  facebook:
+    # https://developers.facebook.com/docs/plugins/comments
+    appid:
+    num_posts: # 5 (default)
+    colorscheme: # "light" (default), "dark"
+
+# Analytics
+analytics:
+  provider: "google-universal" # false (default), "google", "google-universal", "custom"
+  google:
+    tracking_id: "UA-12516800-3"
+
+# Facebook App ID
+fb_app_id: ""
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "<!--more-->"
+incremental: false
+
+# Markdown Processing
+kramdown:
+  input: GFM
+
+# Default YAML values
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: true
+      social-share: true
+  -
+    scope:
+      path: ""
+    values:
+      layout: "page"
+      comments: false
+      markdown_body: "markdown-body"
+
+# Reading Files
+include:
+  - _pages
+exclude:
+  - css
+  - js
+  - vendor
+keep_files:
+  - .git
+  - .svn
+  - assets
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+# Plugins
+gems:
+  - jekyll-feed
+  - jekyll-paginate
