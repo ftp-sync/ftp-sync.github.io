@@ -4,7 +4,7 @@ destination: web
 url: "https://ftp-sync.github.io"
 baseurl: ""
 title: "FTP Sync"
-description: "Portable WAMP software stack"
+description: "Synchronize your FTP server with your NAS/server/computer"
 logo: /img/logo.png
 version: 1.0
 paypal-button-id: "7NFD44VBNE3VL"
