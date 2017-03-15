@@ -64,7 +64,7 @@ gulp.task("assets-clean", function(done) {
 gulp.task("assets-scripts", function() {
   assetsToInject = merge(assetsToInject, gulp.src(config.filters.js)
     .pipe(order(["**/*.js", "**/main.js"]))
-    .pipe(gutil.env.env === "production" ? concat("ftp-sync.js") : gutil.noop())
+    .pipe(gutil.env.env === "production" ? concat("ftpgrab.js") : gutil.noop())
     .pipe(gutil.env.env === "production" ? uglify() : gutil.noop())
     .pipe(gutil.env.env === "production" ? bust.resources() : gutil.noop())
     .pipe(flatten())
@@ -76,7 +76,7 @@ gulp.task("assets-styles", function() {
     .pipe(order(["**/main.css", "**/*.css"]))
     .pipe(gutil.env.env === "production" ? cleanCSS({ keepSpecialComments: 0 }) : gutil.noop())
     .pipe(autoprefixer("last 2 version", "safari 5", "ie 8", "ie 9"))
-    .pipe(gutil.env.env === "production" ? concat("ftp-sync.css") : gutil.noop())
+    .pipe(gutil.env.env === "production" ? concat("ftpgrab.css") : gutil.noop())
     .pipe(gutil.env.env === "production" ? bust.resources() : gutil.noop())
     .pipe(flatten())
     .pipe(gulp.dest(config.destination + "/" + config.paths.assets)));

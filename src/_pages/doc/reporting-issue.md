@@ -30,7 +30,7 @@ Tell me what happens instead
 
 **Operating system and platform (ex.Debian 8 64bits)** :
 
-**ftp-sync version (ex. 3.0)** :
+**ftpgrab version (ex. 3.0)** :
 
 **wget version (ex. 1.16)** :
 
@@ -41,4 +41,4 @@ Tell me what happens instead
 **sqlite3 version (ex. 3.8.7.1)** :
 ```
 
-Attach your log file located in `/var/log/ftp-sync` with a drag and drop on the issue.
+Attach your log file located in `/var/log/ftpgrab` with a drag and drop on the issue.

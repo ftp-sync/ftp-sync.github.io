@@ -5,7 +5,7 @@ sidebar: doc
 ---
 {% include vars.html %}
 
-Before running the script, you must copy the config file `/opt/ftp-sync/ftp-sync.conf` to `/opt/ftp-sync/conf/seedbox.conf`.<br />
+Before running the script, you must copy the config file `/opt/ftpgrab/ftpgrab.conf` to `/opt/ftpgrab/conf/seedbox.conf`.<br />
 Here i have named the config file `seedbox.conf`. You can name it as you want but it must be unique!<br />
 The name of the config file (`seedbox`) will be used during the process to create the PID file, the logs files and the hash file so be careful with it!
 

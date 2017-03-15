@@ -1,9 +1,9 @@
 # General
 source: src
 destination: web
-url: "https://ftp-sync.github.io"
+url: "https://ftpgrab.github.io"
 baseurl: ""
-title: "FTP Sync"
+title: "FTPGrab"
 description: "Synchronize your FTP server with your NAS/server/computer"
 logo: /img/logo.png
 version: 1.0
@@ -19,8 +19,8 @@ compress_html:
 # Github
 github:
   baseurl: https://github.com
-  user: ftp-sync
-  repo: ftp-sync
+  user: ftpgrab
+  repo: ftpgrab
 
 # Paths
 paths:
@@ -59,7 +59,7 @@ navbar:
     Get started: "doc/get-started"
     Documentation: "doc"
     Donate: "donate"
-    Github: "https://github.com/ftp-sync/ftp-sync"
+    Github: "https://github.com/ftpgrab/ftpgrab"
 
 # Author
 author:

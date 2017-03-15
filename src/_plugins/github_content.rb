@@ -30,7 +30,7 @@ module Jekyll
       url = File.join(GITHUB_RAW_URI, @user, @repo, @commitish_or_branch, @filename)
       Jekyll.logger.debug "github_content url: #{url}"
 
-      tmp_dir = File.join('tmp', 'ftp-sync')
+      tmp_dir = File.join('tmp', 'ftpgrab')
       FileUtils.mkdir_p tmp_dir
       file = File.join(tmp_dir, File.basename(@filename))
 

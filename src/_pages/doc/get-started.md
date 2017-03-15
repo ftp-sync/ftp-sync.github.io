@@ -25,24 +25,24 @@ sidebar: doc
 Execute the following commands to download and install the script :
 
 ```console
-$ mkdir -p /opt/ftp-sync/conf /var/log/ftp-sync
-$ wget https://raw.github.com/{{ site.github.user }}/{{ site.github.repo }}/master/ftp-sync.sh -O /etc/init.d/ftp-sync --no-check-certificate
-$ chmod +x /etc/init.d/ftp-sync
-$ wget https://raw.github.com/{{ site.github.user }}/{{ site.github.repo }}/master/ftp-sync.conf -O /opt/ftp-sync/ftp-sync.conf --no-check-certificate
+$ mkdir -p /opt/ftpgrab/conf /var/log/ftpgrab
+$ wget https://raw.github.com/{{ site.github.user }}/{{ site.github.repo }}/master/ftpgrab.sh -O /etc/init.d/ftpgrab --no-check-certificate
+$ chmod +x /etc/init.d/ftpgrab
+$ wget https://raw.github.com/{{ site.github.user }}/{{ site.github.repo }}/master/ftpgrab.conf -O /opt/ftpgrab/ftpgrab.conf --no-check-certificate
 ```
 
-FTP Sync can be run multiple times depending on the number of config files.
+FTPGrab can be run multiple times depending on the number of config files.
 
 {% include callout.html type="info" text="Before running the script, you must create your first config file. Read the [Configuration](/doc/configuration) page for more info." %}
 
 # Usage
 
 ```console
-$ /etc/init.d/ftp-sync <CONFIG_FILE>
+$ /etc/init.d/ftpgrab <CONFIG_FILE>
 ```
 
-**CONFIG_FILE** is a config file located in `/opt/ftp-sync/conf`.<br />
-ex. `$ /etc/init.d/ftp-sync seedbox.conf`
+**CONFIG_FILE** is a config file located in `/opt/ftpgrab/conf`.<br />
+ex. `$ /etc/init.d/ftpgrab seedbox.conf`
 
 ## Automatic sync with cron
 
@@ -50,7 +50,7 @@ You can automatically synchronize FTP files by calling the script in a [crontab]
 For example :
 
 ```
-0 4 * * * cd /etc/init.d/ && ./ftp-sync seedbox.conf >/dev/null 2>&1
+0 4 * * * cd /etc/init.d/ && ./ftpgrab seedbox.conf >/dev/null 2>&1
 ```
 
 This will synchronize your FTP files using the config file `seedbox.conf` every day at 4 am.

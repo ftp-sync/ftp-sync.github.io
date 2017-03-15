@@ -161,7 +161,7 @@ $ vi /etc/crontab
 ```
 
 ```console
-0  4  *  *  *  root    cd /etc/init.d/ && bash ftp-sync /tmp/seedbox/ >/dev/null 2>&1
+0  4  *  *  *  root    cd /etc/init.d/ && bash ftpgrab /tmp/seedbox/ >/dev/null 2>&1
 ```
 
 Then update crontab :
@@ -179,7 +179,7 @@ $ synoservice -restart crond
 
 ## sudo
 
-If you want to launch FTP Sync as sudoer you have to install sudo from ipkg :
+If you want to launch FTPGrab as sudoer you have to install sudo from ipkg :
 
 ```console
 $ ipkg install sudo

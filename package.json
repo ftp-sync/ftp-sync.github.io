@@ -1,19 +1,19 @@
 {
-  "name": "ftp-sync-website",
+  "name": "ftpgrab-website",
   "version": "1.0.0",
-  "description": "FTP Sync's website",
+  "description": "FTPGrab's website",
   "main": "gulpfile.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/ftp-sync/ftp-sync.github.io.git"
+    "url": "git://github.com/ftpgrab/ftpgrab.github.io.git"
   },
   "author": "crazy-max",
   "license": "MIT",
   "private": true,
   "bugs": {
-    "url": "https://github.com/ftp-sync/ftp-sync/issues"
+    "url": "https://github.com/ftpgrab/ftpgrab/issues"
   },
-  "homepage": "https://github.com/ftp-sync/ftp-sync.github.io",
+  "homepage": "https://github.com/ftpgrab/ftpgrab.github.io",
   "scripts": {
     "start": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"

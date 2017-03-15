@@ -1,6 +1,6 @@
 {
-  "name": "ftp-sync-website",
-  "description": "FTP Sync's website",
+  "name": "ftpgrab-website",
+  "description": "FTPGrab's website",
   "license": "MIT",
   "main": "gulpfile.js",
   "authors": [
