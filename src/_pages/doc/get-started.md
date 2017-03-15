@@ -31,8 +31,9 @@ $ chmod +x /etc/init.d/ftp-sync
 $ wget https://raw.github.com/{{ site.github.user }}/{{ site.github.repo }}/master/ftp-sync.conf -O /opt/ftp-sync/ftp-sync.conf --no-check-certificate
 ```
 
-FTP Sync can be run multiple times depending on the number of config files.<br />
-Before running the script, you must create your first the config file. Read the [Configuration](/doc/configuration) page for more info.
+FTP Sync can be run multiple times depending on the number of config files.
+
+{% include callout.html type="info" text="Before running the script, you must create your first config file. Read the [Configuration](/doc/configuration) page for more info." %}
 
 # Usage
 
