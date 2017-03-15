@@ -44,16 +44,16 @@ $ /etc/init.d/ftpgrab <CONFIG_FILE>
 **CONFIG_FILE** is a config file located in `/opt/ftpgrab/conf`.<br />
 ex. `$ /etc/init.d/ftpgrab seedbox.conf`
 
-## Automatic sync with cron
+## Automatic grab with cron
 
-You can automatically synchronize FTP files by calling the script in a [crontab](http://en.wikipedia.org/wiki/Crontab).<br />
+You can automatically grab FTP files by calling the script in a [crontab](http://en.wikipedia.org/wiki/Crontab).<br />
 For example :
 
 ```
 0 4 * * * cd /etc/init.d/ && ./ftpgrab seedbox.conf >/dev/null 2>&1
 ```
 
-This will synchronize your FTP files using the config file `seedbox.conf` every day at 4 am.
+This will grab your FTP files using the config file `seedbox.conf` every day at 4 am.
 
 # Upgrade
 

@@ -69,7 +69,7 @@ FTP password.
 
 * **required**
 
-FTP sources paths to synchronize.<br />
+FTP sources paths to grab.<br />
 
 Example for one path:
 ```

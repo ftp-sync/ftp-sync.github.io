@@ -4,7 +4,7 @@ destination: web
 url: "https://ftpgrab.github.io"
 baseurl: ""
 title: "FTPGrab"
-description: "Synchronize your FTP server with your NAS/server/computer"
+description: "Simple script to grab your files from a remote FTP server"
 logo: /img/logo.png
 version: 1.0
 paypal-button-id: "7NFD44VBNE3VL"
