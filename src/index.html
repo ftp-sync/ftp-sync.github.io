@@ -10,22 +10,25 @@ bigimg: /img/home-big.jpg
 <section class="home">
   <div class="container">
     <h2 class="title text-center">What is {{ site.title }} ?</h2>
-    <div class="intro text-center markdown-body">
+    <div class="intro text-center">
       <p>
+        {% include ads.html type="adsense" client="ca-pub-6761939715072275" slot="2087135436" %}
+      </p>
+      <p class="markdown-body">
         <strong>{{ site.title }}</strong> (formerly <i>FTP Sync</i>) is a shell script to grab <i class="fa fa-download" aria-hidden="true"></i> your files from a remote FTP server to your NAS / server / computer.<br />
         A hash is created for each downloaded file and will prevent to download it again even if it is not present in the destination folder.<br />
         You can also apply a filter to search for files with a regular expression.
       </p>
-      <p>
+      <p class="markdown-body">
         Because this script only needs <code>wget</code>, it is ideal for those with a seedbox to synchronize with a NAS (Synology Qnap D-Link).<br />
         With the sqlite3 HASH_STORAGE method, the performance will be improved <i class="fa fa-fire" aria-hidden="true" style="color:#fa891a"></i> !
       </p>
-      <p>
+      <p class="markdown-body">
         To be notified of new releases you can star the <a href="{{ var_repo_url }}">repository on Github</a>.<br />
         It is free and open source and always will be!<br />
         And do not forget to star <i class="fa fa-star" aria-hidden="true" style="color:#f1c40f"></i> the project and spread the word <i class="fa fa-bullhorn" aria-hidden="true"></i> if you like it <i class="fa fa-heart" aria-hidden="true" style="color:#c75c5c"></i>
       </p>
-      <p>{% include recommend.html %}</p>
+      <p class="markdown-body">{% include recommend.html %}</p>
     </div>
   </div>
 </section>
