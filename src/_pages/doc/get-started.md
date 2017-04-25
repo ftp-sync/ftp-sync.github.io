@@ -9,23 +9,23 @@ sidebar: doc
 
 # Requirements
 
-* Need to be root or sudoer.
-* [awk](http://en.wikipedia.org/wiki/Awk) is required.
-* [nawk](http://linux.die.net/man/1/nawk) is required.
-* [gawk](http://www.gnu.org/software/gawk/) is required.
-* [mail](http://linux.die.net/man/1/mail) is optional if you do not fill [EMAIL_LOG](/doc/configuration/#email_log).
-* [wget](http://en.wikipedia.org/wiki/Wget) >= 1.12 is required.
-* [md5sum](http://en.wikipedia.org/wiki/Md5sum) is required.
-* [curl](http://en.wikipedia.org/wiki/CURL) >= 7 is optional if you do not fill [DL_METHOD](/doc/configuration/#dl_method) with `curl`.
-* [sha1sum](https://en.wikipedia.org/wiki/Sha1sum) is optional if you do not fill [HASH_TYPE](/doc/configuration/#hash_type) with `sha1`.
-* [sqlite3](http://linux.die.net/man/1/sqlite3) >= 3.4 is optional if you do not fill [HASH_STORAGE](/doc/configuration/#hash_storage) with `sqlite3`.
+* [awk](http://en.wikipedia.org/wiki/Awk)
+* [nawk](http://linux.die.net/man/1/nawk)
+* [gawk](http://www.gnu.org/software/gawk/)
+* [mail](http://linux.die.net/man/1/mail) is optional if you do not fill [EMAIL_LOG](/doc/configuration/#email_log)
+* [wget](http://en.wikipedia.org/wiki/Wget) >= 1.12
+* [md5sum](http://en.wikipedia.org/wiki/Md5sum)
+* [curl](http://en.wikipedia.org/wiki/CURL) >= 7 is optional if you do not fill [DL_METHOD](/doc/configuration/#dl_method) with `curl`
+* [sha1sum](https://en.wikipedia.org/wiki/Sha1sum) is optional if you do not fill [HASH_TYPE](/doc/configuration/#hash_type) with `sha1`
+* [sqlite3](http://linux.die.net/man/1/sqlite3) >= 3.4 is optional if you do not fill [HASH_STORAGE](/doc/configuration/#hash_storage) with `sqlite3`
 
 # Installation
 
-Execute the following commands to download and install the script :
+For the installation you need to be root or sudoer :
 
 ```console
-$ mkdir -p /opt/ftpgrab/conf /var/log/ftpgrab
+$ apt-get install gawk curl wget mailutils
+$ mkdir -p /opt/ftpgrab/conf /var/log/ftpgrab /var/run/ftpgrab
 $ wget https://raw.github.com/{{ site.github.user }}/{{ site.github.repo }}/master/ftpgrab.sh -O /etc/init.d/ftpgrab --no-check-certificate
 $ chmod +x /etc/init.d/ftpgrab
 $ wget https://raw.github.com/{{ site.github.user }}/{{ site.github.repo }}/master/ftpgrab.conf -O /opt/ftpgrab/ftpgrab.conf --no-check-certificate
