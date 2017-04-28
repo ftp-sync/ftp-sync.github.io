@@ -4,9 +4,9 @@
   <a href="https://travis-ci.org/ftpgrab/ftpgrab.github.io"><img src="https://img.shields.io/travis/ftpgrab/ftpgrab.github.io/dev.svg?style=flat-square" alt="Build Status"></a>
   <a href="https://www.codacy.com/app/ftpgrab/ftpgrab.github.io"><img src="https://img.shields.io/codacy/grade/20c303b459534d7ead9ae0c8d946bacd.svg?style=flat-square" alt="Code Quality"></a>
   <a href="https://gemnasium.com/github.com/ftpgrab/ftpgrab.github.io"><img src="https://img.shields.io/gemnasium/ftpgrab/ftpgrab.github.io.svg?style=flat-square" alt="Gemnasium"></a>
+  <a href="https://stats.uptimerobot.com/Dq8NDcDg4"><img src="https://img.shields.io/uptimerobot/ratio/m778918924-2d17f3bbdfe6405f84c20a72.svg?style=flat-square" alt="Uptime"></a>
   <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6EALX9NDSRBAJ"><img src="https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square" alt="Donate Paypal"></a>
   <a href="https://flattr.com/submit/auto?user_id=crazymax&url=https://ftpgrab.github.io"><img src="https://img.shields.io/badge/flattr-this-green.svg?style=flat-square" alt="Flattr this!"></a>
-  <a href="https://ftpgrab.github.io"><img src="https://app.statuscake.com/button/index.php?Track=nqGxZcxpKK&Days=1&Design=3" alt="StatusCake Uptime"></a>
 </p>
 
 ## Prerequisites
