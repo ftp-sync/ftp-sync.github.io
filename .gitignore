@@ -1,5 +1,6 @@
 # WebStorm
 /.idea
+/*.iml
 
 # Jekyll
 /_asset_bundler_cache

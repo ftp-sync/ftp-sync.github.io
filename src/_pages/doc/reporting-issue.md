@@ -11,7 +11,7 @@ First,
 * Search for [existing issues]({{ var_repo_url }}/issues).
 * Reproduce the problem with `DEBUG=1` in the config file.
 
-Then create a new issue with based on this template :
+Then create a new issue based on this template :
 
 ```
 ### Steps to reproduce this issue

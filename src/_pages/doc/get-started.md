@@ -26,8 +26,8 @@ For the installation you need to be root or sudoer :
 ```console
 $ apt-get install gawk curl wget mailutils
 $ mkdir -p /opt/ftpgrab/conf /var/log/ftpgrab /var/run/ftpgrab
-$ wget https://raw.github.com/{{ site.github.user }}/{{ site.github.repo }}/master/ftpgrab.sh -O /etc/init.d/ftpgrab --no-check-certificate
-$ chmod +x /etc/init.d/ftpgrab
+$ wget https://raw.github.com/{{ site.github.user }}/{{ site.github.repo }}/master/ftpgrab.sh -O /usr/bin/ftpgrab --no-check-certificate
+$ chmod +x /usr/bin/ftpgrab
 $ wget https://raw.github.com/{{ site.github.user }}/{{ site.github.repo }}/master/ftpgrab.conf -O /opt/ftpgrab/ftpgrab.conf --no-check-certificate
 ```
 
@@ -42,7 +42,7 @@ $ /etc/init.d/ftpgrab <CONFIG_FILE>
 ```
 
 **CONFIG_FILE** is a config file located in `/opt/ftpgrab/conf`.<br />
-ex. `$ /etc/init.d/ftpgrab seedbox.conf`
+ex. `$ ftpgrab seedbox.conf`
 
 ## Automatic grab with cron
 
@@ -50,7 +50,7 @@ You can automatically grab FTP files by calling the script in a [crontab](http:/
 For example :
 
 ```
-0 4 * * * cd /etc/init.d/ && ./ftpgrab seedbox.conf >/dev/null 2>&1
+0 4 * * * ftpgrab seedbox.conf >/dev/null 2>&1
 ```
 
 This will grab your FTP files using the config file `seedbox.conf` every day at 4 am.
