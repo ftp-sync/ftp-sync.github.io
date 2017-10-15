@@ -21,6 +21,13 @@ sidebar: doc
 
 # Installation
 
+## With Docker
+
+An [official docker image](https://hub.docker.com/r/crazymax/ftpgrab/) 🐳 is available for FTPGrab.<br />
+For more info, have a look on the [docker repository](https://github.com/{{ site.github.user }}/docker).
+
+## Manually
+
 For the installation you need to be root or sudoer :
 
 ```console
@@ -38,7 +45,7 @@ FTPGrab can be run multiple times depending on the number of config files.
 # Usage
 
 ```console
-$ /etc/init.d/ftpgrab <CONFIG_FILE>
+$ ftpgrab <CONFIG_FILE>
 ```
 
 **CONFIG_FILE** is a config file located in `/opt/ftpgrab/conf`.<br />
