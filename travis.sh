@@ -24,4 +24,4 @@ rm -rf .git
 cd ../
 
 # test
-htmlproofer ./web --allow-hash-href --check-favicon --only-4xx --alt-ignore "/.*/" --url-ignore "/#0/" --log-level=:debug
+#htmlproofer ./web --allow-hash-href --check-favicon --only-4xx --alt-ignore "/.*/" --url-ignore "/#0/" --log-level=:debug
