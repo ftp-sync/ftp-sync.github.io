@@ -159,6 +159,26 @@ DL_REGEX="\
 "
 ```
 
+## DL\_EXCLUDE\_REGEX
+
+* *optional*
+
+Apply a filter to exclude files for download with a regular expression.<br />
+Separate each regular expression with a semicolon.<br />
+
+Example for one regex:
+```
+DL_EXCLUDE_REGEX="*.part"
+```
+
+Example for multi regex:
+```
+DL_EXCLUDE_REGEX="\
+  *.part;\
+  tmp*.log;\
+"
+```
+
 ## DL\_RETRY
 
 * **required**
