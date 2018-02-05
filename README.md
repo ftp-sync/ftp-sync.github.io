@@ -5,7 +5,6 @@
   <a href="https://www.codacy.com/app/ftpgrab/ftpgrab.github.io"><img src="https://img.shields.io/codacy/grade/20c303b459534d7ead9ae0c8d946bacd.svg?style=flat-square" alt="Code Quality"></a>
   <a href="https://gemnasium.com/github.com/ftpgrab/ftpgrab.github.io"><img src="https://img.shields.io/gemnasium/ftpgrab/ftpgrab.github.io.svg?style=flat-square" alt="Gemnasium"></a>
   <a href="https://stats.uptimerobot.com/Dq8NDcDg4"><img src="https://img.shields.io/uptimerobot/ratio/m778918924-2d17f3bbdfe6405f84c20a72.svg?style=flat-square" alt="Uptime"></a>
-  <a href="https://saythanks.io/to/crazymax"><img src="https://img.shields.io/badge/thank-crazymax-426aa5.svg?style=flat-square" alt="Say Thanks"></a>
   <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6EALX9NDSRBAJ"><img src="https://img.shields.io/badge/donate-paypal-7057ff.svg?style=flat-square" alt="Donate Paypal"></a>
 </p>
 
