@@ -6,7 +6,7 @@ baseurl: ""
 title: "FTPGrab"
 description: "Simple script to grab your files from a remote FTP server"
 logo: /img/logo.png
-version: 1.0
+version: 1.1
 paypal-button-id: "7NFD44VBNE3VL"
 
 # Compress HTML
@@ -24,7 +24,7 @@ github:
 # Paths
 paths:
   assets: assets
-  bower: bower_components
+  npm: node_modules
 
 # Assets
 assets:

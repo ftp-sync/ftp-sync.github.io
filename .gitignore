@@ -1,4 +1,4 @@
-# WebStorm
+# Jetbrains
 /.idea
 /*.iml
 
@@ -13,9 +13,7 @@
 # Node
 /node_modules
 /npm-debug.log*
-
-# Bower
-/bower_components
+/yarn-error.log
 
 # Custom
 /.dev

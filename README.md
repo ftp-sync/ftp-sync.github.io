@@ -15,14 +15,12 @@ To work on the website of the [FTPGrab](https://ftpgrab.github.io) project, you'
 1. [Ruby](https://www.ruby-lang.org/en/documentation/installation/) - choose an available tool to install Ruby on your system (or use [Neard](http://neard.io)).
 2. [Bundler](https://bundler.io/) - `$ gem install bundler`
 3. [Jekyll](http://jekyllrb.com/) - `$ gem install jekyll`
-4. [Node.js](http://nodejs.org) - use the installer (or use [Neard](http://neard.io)).
-5. [gulp.js](https://github.com/gulpjs/gulp) - `$ npm install -g gulp`
-6. [Bower](https://github.com/bower/bower) - `$ npm install -g bower`
+4. [Yarn](https://yarnpkg.com) - use the installer (or use Neard).
 
 ## Installation
 
 1. Clone this repo, or download it into a directory of your choice.
-2. Inside the directory, run `bundle install`, `npm install` and `bower install`.
+2. Inside the directory, run `bundle install`, `yarn install`.
 
 ## Usage
 
