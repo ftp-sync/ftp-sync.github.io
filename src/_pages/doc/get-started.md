@@ -10,8 +10,6 @@ sidebar: doc
 # Requirements
 
 * [awk](http://en.wikipedia.org/wiki/Awk)
-* [nawk](http://linux.die.net/man/1/nawk)
-* [gawk](http://www.gnu.org/software/gawk/)
 * [mail](http://linux.die.net/man/1/mail) is optional if you do not fill [EMAIL_LOG](/doc/configuration/#email_log)
 * [wget](http://en.wikipedia.org/wiki/Wget) >= 1.12
 * [md5sum](http://en.wikipedia.org/wiki/Md5sum)
