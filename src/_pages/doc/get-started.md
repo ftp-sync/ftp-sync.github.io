@@ -38,7 +38,7 @@ $ wget https://raw.github.com/{{ site.github.user }}/{{ site.github.repo }}/mast
 
 FTPGrab can be run multiple times depending on the number of config files.
 
-{% include callout.html type="info" text="Before running the script, you must create your first config file. Read the [Configuration](/doc/configuration) page for more info." %}
+{% include callout.html type="info" text="Before running the script, you must create your first config file. Read the [Configuration](/doc/configuration/) page for more info." %}
 
 # Usage
 
@@ -62,4 +62,4 @@ This will grab your FTP files using the config file `seedbox.conf` every day at 
 
 # Upgrade
 
-All instructions to upgrade from a previous release are added in the [Upgrade notes](/doc/upgrade-notes) page.
+All instructions to upgrade from a previous release are added in the [Upgrade notes](/doc/upgrade-notes/) page.
