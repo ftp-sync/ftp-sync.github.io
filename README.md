@@ -3,7 +3,6 @@
 <p align="center">
   <a href="https://travis-ci.org/ftpgrab/ftpgrab.github.io"><img src="https://img.shields.io/travis/ftpgrab/ftpgrab.github.io/dev.svg?style=flat-square" alt="Build Status"></a>
   <a href="https://www.codacy.com/app/ftpgrab/ftpgrab.github.io"><img src="https://img.shields.io/codacy/grade/20c303b459534d7ead9ae0c8d946bacd.svg?style=flat-square" alt="Code Quality"></a>
-  <a href="https://libraries.io/github/ftpgrab/ftpgrab.github.io"><img src="https://img.shields.io/librariesio/github/ftpgrab/ftpgrab.github.io.svg?style=flat-square" alt="Dependency Status"></a>
   <a href="https://stats.uptimerobot.com/Dq8NDcDg4"><img src="https://img.shields.io/uptimerobot/ratio/m778918924-2d17f3bbdfe6405f84c20a72.svg?style=flat-square" alt="Uptime"></a>
   <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6EALX9NDSRBAJ"><img src="https://img.shields.io/badge/donate-paypal-7057ff.svg?style=flat-square" alt="Donate Paypal"></a>
 </p>
