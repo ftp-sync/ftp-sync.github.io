@@ -9,6 +9,22 @@ logo: /img/logo.png
 version: 1.1
 paypal-button-id: "7NFD44VBNE3VL"
 
+# Social
+social:
+  email:
+  facebook:
+  github: ftpgrab
+  twitter: crazyws
+  reddit: crazyymaxx
+  linkedin:
+  xing:
+  stackoverflow:
+  snapchat:
+  instagram:
+  youtube:
+  spotify:
+  telephone:
+
 # Compress HTML
 compress_html:
   ignore:
@@ -67,8 +83,7 @@ author:
   facebook:
   github: crazy-max
   twitter: crazyws
-  reddit:
-  google-plus: u/0/+CrazyMaxx
+  reddit: crazyymaxx
   linkedin:
   xing:
   stackoverflow:
@@ -85,9 +100,8 @@ footer:
     facebook: false
     email: false
     twitter: true
-    google-plus: true
     github: true
-    reddit: false
+    reddit: true
     linkedin: false
     xing: false
     stackoverflow: false
@@ -110,7 +124,6 @@ ads-enabled: true
 share-links-active:
   twitter: true
   facebook: true
-  google: true
   linkedin: true
   reddit: true
 excerpt_length: 25
@@ -122,7 +135,7 @@ paginate: 5
 
 # Comments
 comments:
-  provider: # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
+  provider: # false (default), "disqus", "discourse", "facebook", "staticman", "custom"
   disqus:
     shortname: # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
