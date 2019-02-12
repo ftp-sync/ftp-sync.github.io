@@ -5,7 +5,7 @@ sidebar: doc
 ---
 {% include vars.html %}
 
-Before running FTPGrab, you must create your first `ftpgrab.yml` [configuration file](https://github.com/{{ site.github.user }}/{{ site.github.repo }}/blob/5.0.x/ftpgrab.yml){:target="_blank"} that looks like.
+Before running FTPGrab, you must create your first `ftpgrab.yml` [configuration file](https://github.com/{{ site.github.user }}/{{ site.github.repo }}/blob/master/ftpgrab.yml){:target="_blank"} that looks like.
 
 * `ftp`
   * `host`: FTP host IP or domain. {% include label.html type="danger" text="required" %}
