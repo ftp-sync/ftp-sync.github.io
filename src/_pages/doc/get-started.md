@@ -3,6 +3,7 @@ title: Get started
 permalink: /doc/get-started/
 sidebar: doc
 ---
+{% include vars.html %}
 
 * TOC
 {:toc}
@@ -34,13 +35,25 @@ To continue, [read the instructions](https://github.com/{{ site.github.user }}/d
 
 ## Binary
 
-Choose the file matching the destination platform from the [releases page](https://github.com/{{ site.github.user }}/{{ site.github.repo }}/releases){:target="_blank"}, copy the URL and replace the URL within the commands below:
+Choose the archive matching the destination platform :
+
+* ![](/img/os/macos.png) [ftpgrab_{{ site.app_version }}_darwin_i386.tar.gz]({{ var_repo_url }}/releases/download/{{ site.app_version }}/ftpgrab_{{ site.app_version }}_darwin_i386.tar.gz)
+* ![](/img/os/macos.png) [ftpgrab_{{ site.app_version }}_darwin_x86_64.tar.gz]({{ var_repo_url }}/releases/download/{{ site.app_version }}/ftpgrab_{{ site.app_version }}_darwin_x86_64.tar.gz)
+* ![](/img/os/linux.png) [ftpgrab_{{ site.app_version }}_linux_arm64.tar.gz]({{ var_repo_url }}/releases/download/{{ site.app_version }}/ftpgrab_{{ site.app_version }}_linux_arm64.tar.gz)
+* ![](/img/os/linux.png) [ftpgrab_{{ site.app_version }}_linux_armv6.tar.gz]({{ var_repo_url }}/releases/download/{{ site.app_version }}/ftpgrab_{{ site.app_version }}_linux_armv6.tar.gz)
+* ![](/img/os/linux.png) [ftpgrab_{{ site.app_version }}_linux_armv7.tar.gz]({{ var_repo_url }}/releases/download/{{ site.app_version }}/ftpgrab_{{ site.app_version }}_linux_armv7.tar.gz)
+* ![](/img/os/linux.png) [ftpgrab_{{ site.app_version }}_linux_i386.tar.gz]({{ var_repo_url }}/releases/download/{{ site.app_version }}/ftpgrab_{{ site.app_version }}_linux_i386.tar.gz)
+* ![](/img/os/linux.png) [ftpgrab_{{ site.app_version }}_linux_x86_64.tar.gz]({{ var_repo_url }}/releases/download/{{ site.app_version }}/ftpgrab_{{ site.app_version }}_linux_x86_64.tar.gz)
+* ![](/img/os/windows.png) [ftpgrab_{{ site.app_version }}_windows_i386.zip]({{ var_repo_url }}/releases/download/{{ site.app_version }}/ftpgrab_{{ site.app_version }}_windows_i386.zip)
+* ![](/img/os/windows.png) [ftpgrab_{{ site.app_version }}_windows_x86_64.zip]({{ var_repo_url }}/releases/download/{{ site.app_version }}/ftpgrab_{{ site.app_version }}_windows_x86_64.zip)
+
+And extract FTPGrab :
 
 ```
-$ wget -qO- https://github.com/ftpgrab/ftpgrab/releases/download/5.0.0/ftpgrab_5.0.0_linux_x86_64.tar.gz | tar -zxvf - ftpgrab
+$ wget -qO- https://github.com/ftpgrab/ftpgrab/releases/download/{{ site.app_version }}/ftpgrab_{{ site.app_version }}_linux_x86_64.tar.gz | tar -zxvf - ftpgrab
 ```
 
-After getting a binary, it can be tested with `./ftpgrab --help` or moved to a permanent location.<br />
+After getting the binary, it can be tested with `./ftpgrab --help` or moved to a permanent location.<br />
 When launched manually, FTPGrab can be killed using `Ctrl+C`:
 
 ```
@@ -54,7 +67,7 @@ $ ./ftpgrab --help
 ## Flags
 
 * `--help` : Show help text and exit. _Optional_.
-* `--version` : Show version and exit. _Optional_. (example: `5.0.0`).
+* `--version` : Show version and exit. _Optional_.
 * `--config <path>` : FTPGrab Yaml configuration file. **Required**. (example: `ftpgrab.yml`).
 * `--schedule <cron expression>` : [CRON expression](https://godoc.org/github.com/crazy-max/cron#hdr-CRON_Expression_Format){:target="_blank"} to schedule FTPGrab. _Optional_. (example: `0 */30 * * * *`).
 * `--timezone <timezone>` : Timezone assigned to FTPGrab. _Optional_. (default: `UTC`).
