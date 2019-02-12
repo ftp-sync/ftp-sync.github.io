@@ -84,3 +84,8 @@ Tue, 29 Jan 2019 22:25:51 CET INF Finished, total time spent: 1 minute 56 second
 Here is a mail sample:
 
 ![](/img/faq/ftpgrab-report-email.png)
+
+## How can I edit/remove some entries in the database ?
+
+FTPGrab currently uses the embedded key/value database [bbolt](https://github.com/etcd-io/bbolt){:target="_blank"}.<br />
+You can use [boltBrowser](https://github.com/ShoshinNikita/boltBrowser){:target="_blank"} which is a GUI web-based explorer and editor or [this CLI browser](https://github.com/br0xen/boltbrowser){:target="_blank"} to remove some entries.
