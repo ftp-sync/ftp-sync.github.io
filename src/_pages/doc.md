@@ -11,8 +11,8 @@ cards:
     title: Configuration
     link: /doc/configuration/
   - el-icon: icon_lifesaver
-    title: Troubleshooting
-    link: /doc/troubleshooting/
+    title: FAQ
+    link: /doc/faq/
   - el-icon: icon_search_alt
     title: Changelog
     link: /doc/changelog/

@@ -4,9 +4,9 @@ destination: web
 url: "https://ftpgrab.github.io"
 baseurl: ""
 title: "FTPGrab"
-description: "Simple script to grab your files from a remote FTP server"
+description: "Grab your files periodically from a remote FTP server easily"
 logo: /img/logo.png
-version: 1.3.0
+version: 1.4.0
 paypal-button-id: "7NFD44VBNE3VL"
 
 # Social

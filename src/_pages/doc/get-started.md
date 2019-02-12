@@ -7,58 +7,67 @@ sidebar: doc
 * TOC
 {:toc}
 
-# Requirements
+# Features
 
-* [awk](http://en.wikipedia.org/wiki/Awk)
-* [mail](http://linux.die.net/man/1/mail) is optional if you do not fill [EMAIL_LOG](/doc/configuration/#email_log)
-* [wget](http://en.wikipedia.org/wiki/Wget) >= 1.12
-* [md5sum](http://en.wikipedia.org/wiki/Md5sum)
-* [curl](http://en.wikipedia.org/wiki/CURL) >= 7 is optional if you do not fill [DL_METHOD](/doc/configuration/#dl_method) with `curl`
-* [sha1sum](https://en.wikipedia.org/wiki/Sha1sum) is optional if you do not fill [HASH_TYPE](/doc/configuration/#hash_type) with `sha1`
-* [sqlite3](http://linux.die.net/man/1/sqlite3) >= 3.4 is optional if you do not fill [HASH_STORAGE](/doc/configuration/#hash_storage) with `sqlite3`
+* Multiple sources
+* Prevent re-download through a hash
+* Efficient key/value store database to audit files already downloaded
+* Internal cron implementation through go routines
+* Include and exclude filters with regular expression
+* Date filter
+* Retry on failed download
+* Change file/folder permissions and owner
+* Translate modtimes on downloaded files
+* Beautiful email report
+* Enhanced logging
+* Timezone can be changed
 
 # Installation
 
 ## With Docker
 
-An [official docker image](https://hub.docker.com/r/crazymax/ftpgrab/) 🐳 is available for FTPGrab.<br />
-For more info, have a look on the [docker repository](https://github.com/{{ site.github.user }}/docker).
+FTPGrab provides automatically updated Docker {% gemoji whale %} images within its [Docker Hub](https://hub.docker.com/u/ftpgrab){:target="_blank"} and [Quay](https://quay.io/organization/ftpgrab){:target="_blank"} organization. It is possible to always use the latest stable tag or to use another service that handles updating Docker images.
 
-## Manually
+This reference setup guides users through the setup based on `docker-compose`, but the installation of `docker-compose` is out of scope of this documentation. To install docker-compose itself follow the official [install instructions](https://docs.docker.com/compose/install/){:target="_blank"}.
 
-For the installation you need to be root or sudoer :
+To continue, [read the instructions](https://github.com/{{ site.github.user }}/docker#about){:target="_blank"} on the dedicated GitHub repository.
 
-```console
-$ apt-get install gawk curl wget mailutils
-$ mkdir -p /opt/ftpgrab/conf /var/log/ftpgrab /var/run/ftpgrab
-$ wget https://raw.github.com/{{ site.github.user }}/{{ site.github.repo }}/master/ftpgrab.sh -O /usr/bin/ftpgrab --no-check-certificate
-$ chmod +x /usr/bin/ftpgrab
-$ wget https://raw.github.com/{{ site.github.user }}/{{ site.github.repo }}/master/ftpgrab.conf -O /opt/ftpgrab/ftpgrab.conf --no-check-certificate
+## Binary
+
+Choose the file matching the destination platform from the [releases page](https://github.com/{{ site.github.user }}/{{ site.github.repo }}/releases){:target="_blank"}, copy the URL and replace the URL within the commands below:
+
+```
+$ wget -qO- https://github.com/ftpgrab/ftpgrab/releases/download/5.0.0/ftpgrab_5.0.0_linux_x86_64.tar.gz | tar -zxvf - ftpgrab
 ```
 
-FTPGrab can be run multiple times depending on the number of config files.
+After getting a binary, it can be tested with `./ftpgrab --help` or moved to a permanent location.<br />
+When launched manually, FTPGrab can be killed using `Ctrl+C`:
 
-{% include callout.html type="info" text="Before running the script, you must create your first config file. Read the [Configuration](/doc/configuration/) page for more info." %}
+```
+$ ./ftpgrab --help
+```
 
 # Usage
 
-```console
-$ ftpgrab <CONFIG_FILE>
+`ftpgrab --config=CONFIG [<flags>]`
+
+## Flags
+
+* `--help` : Show help text and exit. _Optional_.
+* `--version` : Show version and exit. _Optional_. (example: `5.0.0`).
+* `--config <path>` : FTPGrab Yaml configuration file. **Required**. (example: `ftpgrab.yml`).
+* `--schedule <cron expression>` : [CRON expression](https://godoc.org/github.com/crazy-max/cron#hdr-CRON_Expression_Format){:target="_blank"} to schedule FTPGrab. _Optional_. (example: `0 */30 * * * *`).
+* `--timezone <timezone>` : Timezone assigned to FTPGrab. _Optional_. (default: `UTC`).
+* `--log-level <level>` : Log level output. _Optional_. (default: `info`).
+* `--log-json` : Enable JSON logging output. _Optional_. (default: `false`).
+* `--log-file <path>` : Add logging to a specific file.. _Optional_. (example: `/var/log/ftpgrab/ftpgrab.log`).
+* `--log-ftp` : Enable low-level FTP log. _Optional_. (default: `false`).
+
+{% include callout.html type="info" text="Before running, you must create your first `ftpgrab.yml` file. Read the [Configuration](/doc/configuration/) page for more info." %}
+
 ```
-
-**CONFIG_FILE** is a config file located in `/opt/ftpgrab/conf`.<br />
-ex. `$ ftpgrab seedbox.conf`
-
-## Automatic grab with cron
-
-You can automatically grab FTP files by calling the script in a [crontab](http://en.wikipedia.org/wiki/Crontab).<br />
-For example :
-
+$ ftpgrab --config ftpgrab.yml
 ```
-0 4 * * * ftpgrab seedbox.conf >/dev/null 2>&1
-```
-
-This will grab your FTP files using the config file `seedbox.conf` every day at 4 am.
 
 # Upgrade
 

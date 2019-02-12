@@ -5,283 +5,46 @@ sidebar: doc
 ---
 {% include vars.html %}
 
-Before running the script, you must copy the config file `/opt/ftpgrab/ftpgrab.conf` to `/opt/ftpgrab/conf/seedbox.conf`.<br />
-Here i have named the config file `seedbox.conf`. You can name it as you want but it must be unique!<br />
-The name of the config file (`seedbox`) will be used during the process to create the PID file, the logs files and the hash file so be careful with it!
-
-* TOC
-{:toc}
-
-# General
-
-## DIR\_DEST
-
-* **required**
-* default value `/tmp/seedbox`
-
-Path where the files will be downloaded.<br />
-Example: `DIR_DEST="/tmp/seedbox"`
-
-## EMAIL\_LOG
-
-* *optional*
-
-Mail address where the logs are sent. Leave empty to disable sending mail.<br />
-Example: `EMAIL_LOG="foo@foo.com"`
-
-## DEBUG
-
-* **required**
-* default value `0`
-
-Enable debug.<br />
-Example: `DEBUG=1`
-
-# FTP
-
-## FTP\_HOST
-
-* **required**
-
-FTP host IP or domain.<br />
-Example: `FTP_HOST="198.51.100.0"` or `FTP_HOST="ftp.foo.com"`
-
-## FTP\_PORT
-
-* **required**
-
-FTP port.<br />
-Example: `FTP_PORT=21`
-
-## FTP\_USER
-
-* **required**
-
-FTP username.
-
-## FTP\_PASSWORD
-
-* **required**
-
-FTP password.
-
-## FTP\_SOURCES
-
-* **required**
-
-FTP sources paths to grab.<br />
-
-Example for one path:
-```
-FTP_SOURCES="/downloads/"
-```
-
-Example for multi paths:
-```
-FTP_SOURCES="\
-  /downloads/;\
-  /other_path/;\
-  /yet_another_path/;\
-"
-```
-
-# FTP security
-
-> Works only with curl method
-
-## FTP\_SECURE
-
-* **required**
-* default value `0`
-
-Open a secure FTP connection (SSL/TLS). Only available for curl method.<br />
-Example: `FTP_SECURE=1`
-
-## FTP\_CHECK\_CERT
-
-* **required**
-* default value `0`
-
-Check the server certificate against the available certificate authorities.<br />
-Not used if `FTP_SECURE=0`.<br />
-Example: `FTP_CHECK_CERT=1`
-
-# Download
-
-## DL\_METHOD
-
-* **required**
-* default value `wget`
-
-The download method. Can be `wget` or `curl`.<br />
-Example: `DL_METHOD="wget"`
-
-## DL\_USER
-
-* *optional*
-
-Linux owner user of downloaded files.<br />
-Example: `DL_USER="ftpuser"`
-
-## DL\_GROUP
-
-* *optional*
-
-Linux owner group of downloaded files.<br />
-Example: `DL_GROUP="ftpgroup"`
-
-## DL\_CHMOD
-
-* *optional*
-
-Permissions of downloaded files.<br />
-Example: `DL_CHMOD="644"`
-
-## DL\_REGEX
-
-* *optional*
-
-Apply a filter to search for files with a regular expression.<br />
-Separate each regular expression with a semicolon.<br />
-Leave empty to grab all files.<br />
-
-Example for one regex:
-```
-DL_REGEX="Game.Of.Thrones.*.avi"
-```
-
-Example for multi regex:
-```
-DL_REGEX="\
-  Game.Of.Thrones.*.avi;\
-  Burn.Notice.*.avi;\
-  The.Big.Bang.Theory.*VOSTFR.*720p.*WEB-DL.*.mkv;\
-"
-```
-
-## DL\_EXCLUDE\_REGEX
-
-* *optional*
-
-Apply a filter to exclude files for download with a regular expression.<br />
-Separate each regular expression with a semicolon.<br />
-
-Example for one regex:
-```
-DL_EXCLUDE_REGEX="*.part"
-```
-
-Example for multi regex:
-```
-DL_EXCLUDE_REGEX="\
-  *.part;\
-  tmp*.log;\
-"
-```
-
-## DL\_RETRY
-
-* **required**
-* default value `3`
-
-Number of retries in case of download failure.<br />
-Example: `DL_RETRY=3`
-
-## DL\_RESUME
-
-* **required**
-* default value `0`
-
-Resume partially downloaded file.<br />
-Example: `DL_RESUME=0`
-
-## DL\_SHUFFLE
-
-* **required**
-* default value `0`
-
-Shuffle file/folder listing (more info on ([PR #25]({{ var_repo_url }}/pull/25#issue-198052599)).<br />
-Example: `DL_SHUFFLE=0`
-
-## DL\_HIDE\_SKIPPED
-
-* **required**
-* default value `0`
-
-Not display the downloads already made or valid in logs.<br />
-Example: `DL_HIDE_SKIPPED=0`
-
-## DL\_HIDE\_PROGRESS
-
-* **required**
-* default value `1`
-
-Not display the progress dots during downloads.<br />
-Example: `DL_HIDE_PROGRESS=1`
-
-## DL\_CREATE\_BASEDIR
-
-* **required**
-* default value `0`
-
-Create basename of a ftp source path in the destination folder.<br />
-WARNING: Highly recommended if you have multiple ftp source paths to prevent overwriting!<br />
-Does not work if `FTP_SOURCES="/"`.<br />
-
-Example if `DL_CREATE_BASEDIR=1` and :
-* The destination folder is `/tmp/seedbox`
-* `FTP_SOURCES="/downloads/;/other_path/"`
-* `/downloads/` src path contains a file called `dl_file1`
-* `/other_path/` src path contains a file called `other_file2`
-
-<br />The destination structure will be :
-```
-[-] tmp
- | [-] seedbox
- |  | [-] downloads
- |  |     | dl_file1
- |  | [-] other_path
- |  |     | other_file2
-```
- 
-Example if `DL_CREATE_BASEDIR=0` and :
-* The destination folder is `/tmp/seedbox`
-* `FTP_SOURCES="/downloads/;/other_path/"`
-* `/downloads/` src path contains a file called `dl_file1`
-* `/other_path/` src path contains a file called `other_file2`
-
-<br />The destination structure will be :
-```
-[-] tmp
- | [-] seedbox
- |  |  | dl_file1
- |  |  | other_file2
-```
-
-# Hash
-
-## HASH\_ENABLED
-
-* **required**
-* default value `1`
-
-Enable audit file already downloaded.<br />
-Example: `HASH_ENABLED=1`
-
-## HASH\_TYPE
-
-* **required**
-* default value `md5`
-
-The hash type. Can be `md5` or `sha1`.<br />
-For the `sha1` method, your need to install the required package: `apt-get install sha1sum`.<br />
-Example: `HASH_TYPE="md5"`
-
-## HASH\_STORAGE
-
-* **required**
-* default value `text`
-
-The hash storage process. Can be `text` or `sqlite3`.<br />
-For the `sqlite3` method, your need to install the required package: `apt-get install sqlite3`.<br />
-Example: `HASH_STORAGE="text"`
+Before running FTPGrab, you must create your first `ftpgrab.yml` [configuration file](https://github.com/{{ site.github.user }}/{{ site.github.repo }}/blob/5.0.x/ftpgrab.yml){:target="_blank"} that looks like.
+
+* `ftp`
+  * `host`: FTP host IP or domain. {% include label.html type="danger" text="required" %}
+    * `port`: FTP port. {% include label.html type="danger" text="required" %} {% include label.html type="default" text="default: 21" %}
+    * `user`: FTP username. {% include label.html type="danger" text="required" %}
+    * `password`: FTP password. {% include label.html type="danger" text="required" %}
+    * `connections_per_host`: Maximum number of FTP connections to open per-host. {% include label.html type="default" text="default: 5" %}
+    * `timeout`: Timeout for opening connections, sending control commands, and each read/write of data transfers. {% include label.html type="default" text="default: 5" %}
+    * `disable_epsv`: Disables EPSV in favour of PASV. This is useful in cases where EPSV connections neither complete nor downgrade to PASV successfully by themselves, resulting in hung connections. {% include label.html type="default" text="default: false" %}
+    * `tls`
+      * `enable`: Enable TLS. {% include label.html type="default" text="default: false" %}
+      * `implicit`: Implicit means both sides already implicitly agree to use TLS, and the client connects directly using TLS. If set to false, means the client first runs an explicit command ("AUTH TLS") before switching to TLS. {% include label.html type="default" text="default: true" %}
+      * `insecure_skip_verify`: Controls whether a client verifies the server's certificate chain and host name. {% include label.html type="default" text="default: false" %}
+    * `sources`: List of sources paths to grab from FTP server. {% include label.html type="danger" text="required" %} {% include label.html type="default" text="default: /" %}
+
+* `db`
+  * `enable`: Enable the database to audit files already downloaded. {% include label.html type="default" text="default: true" %}
+  * `path`: Path to database file. Flag `--docker` force this path to `/db/ftpgrab.db`. {% include label.html type="danger" text="required if db enabled" %} {% include label.html type="default" text="default: ftpgrab.yml" %}
+
+* `download`
+  * `output`: Output destination folder of downloaded files. Flag `--docker` force this path to `/download`. {% include label.html type="danger" text="required" %}
+  * `uid`: Owner user applied to downloaded files. {% include label.html type="default" text="default to caller" %}
+  * `gid`: Owner group applied to downloaded files. {% include label.html type="default" text="default to caller" %}
+  * `chmod_file`: Permissions applied to files. {% include label.html type="default" text="default: 0644" %}
+  * `chmod_dir`: Permissions applied to folders. {% include label.html type="default" text="default: 0755" %}
+  * `include`: List of regular expressions to include files.
+  * `exclude`: List of regular expressions to exclude files.
+  * `since`: Only download files created since the specified date in RFC3339 format (example: `2019-02-01T18:50:05Z`).
+  * `retry`: Number of retries in case of download failure. {% include label.html type="default" text="default: 3" %}
+  * `hide_skipped`: Not display skipped downloads. {% include label.html type="default" text="default: false" %}
+  * `create_basedir`: Create basename of a FTP source path in the destination folder. This is highly recommended if you have multiple FTP source paths to prevent overwriting. Does not apply if `sources` is `/` only. {% include label.html type="default" text="default: false" %}
+
+* `mail`
+  * `enable`: Enable email reports {% include label.html type="default" text="default: false" %}
+  * `host`: SMTP server host {% include label.html type="danger" text="required if mail enabled" %} {% include label.html type="default" text="default: localhost" %}
+  * `port`: SMTP server port {% include label.html type="danger" text="required if mail enabled" %} {% include label.html type="default" text="default: 25" %}
+  * `ssl`: SSL defines whether an SSL connection is used. Should be false in most cases since the auth mechanism should use the STARTTLS ext instead. {% include label.html type="default" text="default: false" %}
+  * `insecure_skip_verify`: Controls whether a client verifies the server's certificate chain and host name. {% include label.html type="default" text="default: false" %}
+  * `username`: SMTP username
+  * `password`: SMTP password
+  * `from`: Sender email address {% include label.html type="danger" text="required if mail enabled" %}
+  * `to`: Recipient email address {% include label.html type="danger" text="required if mail enabled" %}

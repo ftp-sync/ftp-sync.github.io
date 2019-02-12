@@ -5,40 +5,30 @@ sidebar: doc
 ---
 {% include vars.html %}
 
-First,
+## Before submitting an issue
 
-* Read the [Troubleshooting](/doc/troubleshooting/) page.
-* Search for [existing issues]({{ var_repo_url }}/issues).
-* Reproduce the problem with `DEBUG=1` in the config file.
+Please do a search in [open issues](https://github.com/ftpgrab/ftpgrab/issues?utf8=%E2%9C%93&q=) to see if the issue or feature request has already been filed and read the [FAQ](https://ftpgrab.github.io/doc/faq/) page first.
 
-Then create a new issue based on this template :
+If you find your issue already exists, make relevant comments and add your [reaction](https://github.com/blog/2119-add-reactions-to-pull-requests-issues-and-comments){:target="_blank"}. Use a reaction in place of a "+1" comment.
 
-```
-### Steps to reproduce this issue
+{% gemoji +1 %} - upvote
 
-1.
-2.
-3.
+{% gemoji -1 %} - downvote
 
-### Expected Behaviour
-Tell me what should happen
+If you cannot find an existing issue that describes your bug or feature, submit an issue using the guidelines below.
 
-#### Actual Behaviour
-Tell me what happens instead
+## Writing good bug reports and feature requests
 
-#### Configuration
+File a single issue per problem and feature request.
 
-**Operating system and platform (ex.Debian 8 64bits)** :
+* Do not enumerate multiple bugs or feature requests in the same issue.
+* Do not add your issue as a comment to an existing issue unless it's for the identical input. Many issues look similar, but have different causes.
 
-**ftpgrab version (ex. 3.0)** :
+The more information you can provide, the more likely someone will be successful reproducing the issue and finding a fix.
 
-**wget version (ex. 1.16)** :
+You are now ready to [create a new issue](https://github.com/ftpgrab/ftpgrab/issues/new/choose){:target="_blank"}!
 
-**curl version (ex. 7.38.0)** :
+## Closure policy
 
-**md5sum / sha1sum version (ex. 8.23)** :
-
-**sqlite3 version (ex. 3.8.7.1)** :
-```
-
-Attach your log file located in `/var/log/ftpgrab` with a drag and drop on the issue.
+* Issues that don't have the information requested above (when applicable) will be closed immediately and the poster directed to the support guidelines.
+* Issues that go a week without a response from original poster are subject to closure at our discretion.
