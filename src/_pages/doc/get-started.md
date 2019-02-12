@@ -39,6 +39,8 @@ Choose the archive matching the destination platform :
 
 * ![](/img/os/macos.png) [ftpgrab_{{ site.app_version }}_darwin_i386.tar.gz]({{ var_repo_url }}/releases/download/{{ site.app_version }}/ftpgrab_{{ site.app_version }}_darwin_i386.tar.gz)
 * ![](/img/os/macos.png) [ftpgrab_{{ site.app_version }}_darwin_x86_64.tar.gz]({{ var_repo_url }}/releases/download/{{ site.app_version }}/ftpgrab_{{ site.app_version }}_darwin_x86_64.tar.gz)
+* ![](/img/os/freebsd.png) [ftpgrab_{{ site.app_version }}_freebsd_i386.tar.gz]({{ var_repo_url }}/releases/download/{{ site.app_version }}/ftpgrab_{{ site.app_version }}_freebsd_i386.tar.gz)
+* ![](/img/os/freebsd.png) [ftpgrab_{{ site.app_version }}_freebsd_x86_64.tar.gz]({{ var_repo_url }}/releases/download/{{ site.app_version }}/ftpgrab_{{ site.app_version }}_freebsd_x86_64.tar.gz)
 * ![](/img/os/linux.png) [ftpgrab_{{ site.app_version }}_linux_arm64.tar.gz]({{ var_repo_url }}/releases/download/{{ site.app_version }}/ftpgrab_{{ site.app_version }}_linux_arm64.tar.gz)
 * ![](/img/os/linux.png) [ftpgrab_{{ site.app_version }}_linux_armv6.tar.gz]({{ var_repo_url }}/releases/download/{{ site.app_version }}/ftpgrab_{{ site.app_version }}_linux_armv6.tar.gz)
 * ![](/img/os/linux.png) [ftpgrab_{{ site.app_version }}_linux_armv7.tar.gz]({{ var_repo_url }}/releases/download/{{ site.app_version }}/ftpgrab_{{ site.app_version }}_linux_armv7.tar.gz)
