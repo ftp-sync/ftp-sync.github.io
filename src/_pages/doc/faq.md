@@ -10,10 +10,10 @@ sidebar: doc
 
 ## How to grab from multiple sources ?
 
-You can add multiple sources in the configuration file (ftp > sources). For example:
+You can add multiple sources in the `sources` field of the configuration file:
 
 ```yml
-ftp:
+ftp|sftp:
   ...
   sources:
     - /path1

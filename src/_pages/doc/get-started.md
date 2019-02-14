@@ -76,7 +76,6 @@ $ ./ftpgrab --help
 * `--log-level <level>` : Log level output. _Optional_. (default: `info`).
 * `--log-json` : Enable JSON logging output. _Optional_. (default: `false`).
 * `--log-file <path>` : Add logging to a specific file.. _Optional_. (example: `/var/log/ftpgrab/ftpgrab.log`).
-* `--log-ftp` : Enable low-level FTP log. _Optional_. (default: `false`).
 
 {% include callout.html type="info" text="Before running, you must create your first `ftpgrab.yml` file. Read the [Configuration](/doc/configuration/) page for more info." %}
 
