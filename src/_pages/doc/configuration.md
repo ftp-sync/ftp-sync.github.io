@@ -25,6 +25,7 @@ server:
     username:
     password:
     sources:
+      - /
     connections_per_host: 5
     timeout: 5
     disable_epsv: false
@@ -62,6 +63,7 @@ server:
     password:
     key:
     sources:
+      - /
     timeout: 30
     max_packet_size: 32768
 ```
