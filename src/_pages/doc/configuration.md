@@ -88,7 +88,7 @@ db:
 
 * `db`
   * `enable`: Enable the database to audit files already downloaded (default: `true`).
-  * `path`: Path to database file. Flag `--docker` force this path to `/db/ftpgrab.db` (default: `ftpgrab.yml`). **required if enabled**
+  * `path`: Path to database file. Flag `--docker` force this path to `/db/ftpgrab.db` (default: `ftpgrab.db`). **required if enabled**
 
 # Download
 
