@@ -12,7 +12,7 @@ Before running FTPGrab, you must create your first configuration file. See [thes
 
 # Server
 
-Server holds data necessary for server configuration. You have to choose a server `type` in the configuration and use the below corresponding fields.
+`server` holds data necessary for server configuration. You have to choose a server `type` in the configuration and use the below corresponding fields.
 
 ## FTP
 
@@ -120,19 +120,24 @@ download:
   * `hide_skipped`: Not display skipped downloads (default: `false`).
   * `create_basedir`: Create basename of a FTP source path in the destination folder. This is highly recommended if you have multiple FTP source paths to prevent overwriting. Does not apply if `sources` is `/` only (default: `false`).
 
-# Mail
+# Notif
+
+`notif` holds data necessary for notification configuration. You can enable the following notifiers :
+
+## Mail
 
 ```yml
-mail:
-  enable: false
-  host: localhost
-  port: 25
-  ssl: false
-  insecure_skip_verify: false
-  username:
-  password:
-  from:
-  to:
+notif:
+  mail:
+    enable: false
+    host: localhost
+    port: 25
+    ssl: false
+    insecure_skip_verify: false
+    username:
+    password:
+    from:
+    to:
 ```
 
 * `mail`
@@ -143,5 +148,26 @@ mail:
   * `insecure_skip_verify`: Controls whether a client verifies the server's certificate chain and host name (default: `false`).
   * `username`: SMTP username.
   * `password`: SMTP password.
-  * `from`: Sender email address. **required if enabled**
-  * `to`: Recipient email address. **required if enabled**
+  * `from`: Sender email address. **required**
+  * `to`: Recipient email address. **required**
+
+## Webhook
+
+```yml
+notif:
+  webhook:
+    enable: false
+    endpoint: http://webhook.foo.com/sd54qad89azd5a
+    method: GET
+    headers:
+      Content-Type: application/json
+      Authorization: Token123456
+    timeout: 10
+```
+
+* `webhook`
+  * `enable`: Enable webhook notification (default: `false`).
+  * `endpoint`: URL of the HTTP request. **required**
+  * `method`: HTTP method (default: `GET`). **required**
+  * `headers`: Map of additional headers to be sent.
+  * `timeout`: Timeout specifies a time limit for the request to be made. (default: `10`).

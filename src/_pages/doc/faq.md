@@ -79,6 +79,42 @@ Tue, 29 Jan 2019 22:25:46 CET INF ########
 Tue, 29 Jan 2019 22:25:51 CET INF Finished, total time spent: 1 minute 56 seconds
 ```
 
+## What's the structure of the webhook notification ?
+
+An HTTP request is sent with a JSON format response that looks like :
+
+```json
+{
+  "ftpgrab_version": "5.2.0",
+  "server_ip": "10.0.0.1",
+  "dest_hostname": "my-computer",
+  "journal": {
+    "entries": [
+      {
+        "file": "/test/test_changed/1GB.bin",
+        "status_type": "skip",
+        "status_text": "Not included"
+      },
+      {
+        "file": "/test/test_changed/56a42b12df8d27baa163536e7b10d3c7.png",
+        "status_type": "skip",
+        "status_text": "Not included"
+      },
+      {
+        "file": "/test/test_special_chars/1024.rnd",
+        "status_type": "success",
+        "status_text": "1.049MB successfully downloaded in 513 milliseconds"
+      }
+    ],
+    "count": {
+      "success": 1,
+      "skip": 2
+    },
+    "duration": "12 seconds"
+  }
+}
+```
+
 ## What type of report is sent when it is completed ?
 
 Here is a mail sample:
