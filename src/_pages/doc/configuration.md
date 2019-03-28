@@ -26,7 +26,6 @@ server:
     password:
     sources:
       - /
-    connections_per_host: 5
     timeout: 5
     disable_epsv: false
     tls:
@@ -42,7 +41,6 @@ server:
   * `user`: FTP username. **required**
   * `password`: FTP password. **required**
   * `sources`: List of sources paths to grab from FTP server. **required**
-  * `connections_per_host`: Maximum number of FTP connections to open per-host (default: `5`).
   * `timeout`: Timeout for opening connections, sending control commands, and each read/write of data transfers (default: `5`).
   * `disable_epsv`: Disables EPSV in favour of PASV. This is useful in cases where EPSV connections neither complete nor downgrade to PASV successfully by themselves, resulting in hung connections (default: `false`).
   * `tls`
