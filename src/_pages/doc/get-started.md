@@ -26,7 +26,7 @@ sidebar: doc
 
 # Installation
 
-## With Docker
+## Docker
 
 FTPGrab provides automatically updated Docker {% gemoji whale %} images within its [Docker Hub](https://hub.docker.com/u/ftpgrab){:target="_blank"} and [Quay](https://quay.io/organization/ftpgrab){:target="_blank"} organization. It is possible to always use the latest stable tag or to use another service that handles updating Docker images.
 
