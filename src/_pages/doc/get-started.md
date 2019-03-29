@@ -21,6 +21,7 @@ sidebar: doc
 * Change file/folder permissions and owner
 * Translate modtimes on downloaded files
 * Beautiful email report
+* Webhook notification
 * Enhanced logging
 * Timezone can be changed
 
