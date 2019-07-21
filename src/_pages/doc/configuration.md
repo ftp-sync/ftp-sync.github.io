@@ -28,10 +28,8 @@ server:
       - /
     timeout: 5
     disable_epsv: false
-    tls:
-      enable: false
-      implicit: true
-      insecure_skip_verify: false
+    tls: false
+    insecure_skip_verify: false
     log_trace: false
 ```
 
@@ -43,10 +41,8 @@ server:
   * `sources`: List of sources paths to grab from FTP server. **required**
   * `timeout`: Timeout for opening connections, sending control commands, and each read/write of data transfers (default: `5`).
   * `disable_epsv`: Disables EPSV in favour of PASV. This is useful in cases where EPSV connections neither complete nor downgrade to PASV successfully by themselves, resulting in hung connections (default: `false`).
-  * `tls`
-    * `enable`: Enable TLS (default: `false`).
-    * `implicit`: Implicit means both sides already implicitly agree to use TLS, and the client connects directly using TLS. If set to false, means the client first runs an explicit command (_AUTH TLS_) before switching to TLS (default: `true`).
-    * `insecure_skip_verify`: Controls whether a client verifies the server's certificate chain and host name (default: `false`).
+  * `tls`: Use implicit FTP over TLS (default: `false`).
+  * `insecure_skip_verify`: Controls whether a client verifies the server's certificate chain and host name (default: `false`).
   * `log_trace`: Enable low-level FTP log. Works only if log level is debug (default `false`).
 
 ## SFTP
