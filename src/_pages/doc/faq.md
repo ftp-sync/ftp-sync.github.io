@@ -8,6 +8,11 @@ sidebar: doc
 * TOC
 {:toc}
 
+## Who is behind FTPGrab?
+
+Hi, I'm [CrazyMax](https://crazymax.dev){:target="_blank"}. This project is self-funded and developed using my decade of experience building open source software.<br />
+By [supporting me](https://www.patreon.com/{{ site.patreon }}){:target="_blank"}, you're not only sustaining this project, but rather all of [my open source projects](https://github.com/crazy-max){:target="_blank"}.
+
 ## How to grab from multiple sources ?
 
 You can add multiple sources in the `sources` field of the configuration file:
