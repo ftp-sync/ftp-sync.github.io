@@ -13,7 +13,7 @@ sidebar: doc
 Hi, I'm [CrazyMax](https://crazymax.dev){:target="_blank"}. This project is self-funded and developed using my decade of experience building open source software.<br />
 By [supporting me](https://www.patreon.com/{{ site.patreon }}){:target="_blank"}, you're not only sustaining this project, but rather all of [my open source projects](https://github.com/crazy-max){:target="_blank"}.
 
-## How to grab from multiple sources ?
+## How to grab from multiple sources?
 
 You can add multiple sources in the `sources` field of the configuration file:
 
@@ -25,7 +25,7 @@ ftp|sftp:
     - /path2/folder
 ```
 
-## What kind of CRON expression can I use for scheduling ?
+## What kind of CRON expression can I use for scheduling?
 
 A CRON expression represents a set of times, using 6 space-separated fields.
 
@@ -34,11 +34,11 @@ A CRON expression represents a set of times, using 6 space-separated fields.
 
 More examples can be found on the [official library documentation](https://godoc.org/github.com/crazy-max/cron#hdr-CRON_Expression_Format){:target="_blank"}.
 
-## What Regexp semantic is used to filter inclusions/exclusions ?
+## What Regexp semantic is used to filter inclusions/exclusions?
 
 FTPGrab uses [Compile](https://golang.org/pkg/regexp/#Compile){:target="_blank"} to parse regular expressions. This means the regexp returns a match that begins as early as possible in the input (leftmost) like Perl, Python, and other implementations use. You can test your regular expression on [regex101.com](https://regex101.com/){:target="_blank"} and select Golang flavor. Check this [quick example](https://regex101.com/r/jITi0D/1){:target="_blank"}.
 
-## What logs look like ?
+## What logs look like?
 
 Here is a sample output:
 
@@ -84,7 +84,7 @@ Tue, 29 Jan 2019 22:25:46 CET INF ########
 Tue, 29 Jan 2019 22:25:51 CET INF Finished, total time spent: 1 minute 56 seconds
 ```
 
-## What's the structure of the webhook notification ?
+## What's the structure of the webhook notification?
 
 An HTTP request is sent with a JSON format response that looks like :
 
@@ -120,13 +120,13 @@ An HTTP request is sent with a JSON format response that looks like :
 }
 ```
 
-## What type of report is sent when it is completed ?
+## What type of report is sent when it is completed?
 
 Here is a mail sample:
 
 ![](/img/faq/ftpgrab-report-email.png)
 
-## How can I edit/remove some entries in the database ?
+## How can I edit/remove some entries in the database?
 
 FTPGrab currently uses the embedded key/value database [bbolt](https://github.com/etcd-io/bbolt){:target="_blank"}.<br />
 You can use [boltBrowser](https://github.com/ShoshinNikita/boltBrowser){:target="_blank"} which is a GUI web-based explorer and editor or [this CLI browser](https://github.com/br0xen/boltbrowser){:target="_blank"} to remove some entries.
