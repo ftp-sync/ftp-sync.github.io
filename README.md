@@ -1,7 +1,7 @@
 <p align="center"><a href="https://ftpgrab.github.io" target="_blank"><img width="100" src="https://ftpgrab.github.io/img/logo.png"></a></p>
 
 <p align="center">
-  <a href="https://travis-ci.com/ftpgrab/ftpgrab.github.io"><img src="https://img.shields.io/travis/com/ftpgrab/ftpgrab.github.io/dev.svg?style=flat-square" alt="Build Status"></a>
+  <a href="https://github.com/ftpgrab/ftpgrab.github.io/actions"><img src="https://github.com/ftpgrab/ftpgrab.github.io/workflows/website/badge.svg" alt="Build Status"></a>
   <a href="https://www.codacy.com/app/ftpgrab/ftpgrab.github.io"><img src="https://img.shields.io/codacy/grade/20c303b459534d7ead9ae0c8d946bacd.svg?style=flat-square" alt="Code Quality"></a>
   <a href="https://stats.uptimerobot.com/Dq8NDcDg4"><img src="https://img.shields.io/uptimerobot/ratio/m778918924-2d17f3bbdfe6405f84c20a72.svg?style=flat-square" alt="Uptime"></a>
   <br /><a href="https://www.patreon.com/crazymax"><img src="https://img.shields.io/badge/donate-patreon-fb664e.svg?style=flat-square" alt="Support me on Patreon"></a>
