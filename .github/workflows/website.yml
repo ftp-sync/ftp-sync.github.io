@@ -23,11 +23,13 @@ jobs:
         run: |
           echo "$GITHUB_CONTEXT"
       -
+        # https://github.com/actions/setup-node
         name: Set up Node.js
         uses: actions/setup-node@v1
         with:
           node-version: 11
       -
+        # https://github.com/actions/setup-ruby
         name: Set up Ruby
         uses: actions/setup-ruby@v1
         with:
@@ -37,6 +39,7 @@ jobs:
         run: |
           gem install bundler -v 2.0.2
       -
+        # https://github.com/actions/checkout
         name: Checkout
         uses: actions/checkout@v1
       -
@@ -57,11 +60,11 @@ jobs:
           gulp --env=production build
           #htmlproofer ./web --allow-hash-href --check-favicon --only-4xx --alt-ignore "/.*/" --url-ignore "/#0/" --log-level=:debug
       -
+        # https://github.com/crazy-max/ghaction-github-pages
         name: Deploy
         if: success() && github.event_name != 'pull_request'
-        uses: crazy-max/ghaction-github-pages@master
-        with:
-          target_branch: master
-          build_dir: web
+        uses: docker://crazymax/ghaction-github-pages
         env:
+          INPUT_TARGET_BRANCH: master
+          INPUT_BUILD_DIR: web
           GITHUB_PAT: ${{ secrets.GITHUB_PAT }}
