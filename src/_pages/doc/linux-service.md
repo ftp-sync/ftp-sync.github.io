@@ -15,7 +15,7 @@ Run the below command in a terminal:
 sudo vim /etc/systemd/system/ftpgrab.service
 ```
 
-Copy the sample [ftpgrab.service](https://github.com/{{ site.github.user }}/{{ site.github.repo }}/tree/master/.res/systemd/ftpgrab.service).
+Copy the sample [ftpgrab.service](https://github.com/{{ site.github.user }}/{{ site.github.repo }}/tree/master/.res/systemd/ftpgrab.service){:target="_blank"}.
 
 Change the user, group and other required startup values following your needs.
 

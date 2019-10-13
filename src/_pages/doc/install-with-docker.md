@@ -8,7 +8,9 @@ sidebar: doc
 * TOC
 {:toc}
 
-FTPGrab provides automatically updated Docker {% gemoji whale %} images within [Docker Hub](https://hub.docker.com/r/ftpgrab/ftpgrab). It is possible to always use the latest stable tag or to use another service that handles updating Docker images.
+# About
+
+FTPGrab provides automatically updated Docker {% gemoji whale %} images within [Docker Hub](https://hub.docker.com/r/ftpgrab/ftpgrab){:target="_blank"}. It is possible to always use the latest stable tag or to use another service that handles updating Docker images.
 
 Following platforms for this image are available:
 
@@ -29,7 +31,7 @@ Image: ftpgrab/ftpgrab:latest
 # Environment variables
 
 * `TZ` : Timezone assigned to FTPGrab
-* `SCHEDULE` : [CRON expression](https://godoc.org/github.com/crazy-max/cron#hdr-CRON_Expression_Format) to schedule FTPGrab
+* `SCHEDULE` : [CRON expression](https://godoc.org/github.com/crazy-max/cron#hdr-CRON_Expression_Format){:target="_blank"} to schedule FTPGrab
 * `LOG_LEVEL` : Log level output (default `info`)
 * `LOG_JSON`: Enable JSON logging output (default `false`)
 
@@ -40,7 +42,7 @@ Image: ftpgrab/ftpgrab:latest
 
 # Usage
 
-Docker compose is the recommended way to run this image. Copy the content of folder [.res/compose](https://github.com/{{ site.github.user }}/{{ site.github.repo }}/tree/master/.res/compose) in `/opt/ftpgrab/` on your host for example. Edit the compose and config file with your preferences and run the following commands:
+Docker compose is the recommended way to run this image. Copy the content of folder [.res/compose](https://github.com/{{ site.github.user }}/{{ site.github.repo }}/tree/master/.res/compose){:target="_blank"} in `/opt/ftpgrab/` on your host for example. Edit the compose and config file with your preferences and run the following commands:
 
 ```
 docker-compose up -d

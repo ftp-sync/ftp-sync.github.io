@@ -10,7 +10,7 @@ sidebar: doc
 
 # Download
 
-FTPGrab binaries are available in [releases](https://github.com/crazy-max/ddns-route53/releases) GitHub page.
+FTPGrab binaries are available in [releases](https://github.com/ftpgrab/ftpgrab/releases){:target="_blank"} GitHub page.
 
 Choose the archive matching the destination platform:
 
