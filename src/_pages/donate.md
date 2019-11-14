@@ -1,7 +1,6 @@
 ---
 title: Donate
 permalink: /donate/
-markdown_body: ""
 ---
 {% include vars.html %}
 

@@ -31,7 +31,7 @@ jobs:
       -
         # https://github.com/actions/cache
         name: Set up gems cache
-        uses: actions/cache@preview
+        uses: actions/cache@v1
         with:
           path: vendor/bundle
           key: ${{ runner.os }}-gem-${{ hashFiles('**/Gemfile.lock') }}
@@ -40,7 +40,7 @@ jobs:
       -
         # https://github.com/actions/cache
         name: Set up node_modules cache
-        uses: actions/cache@preview
+        uses: actions/cache@v1
         with:
           path: node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
