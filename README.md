@@ -4,7 +4,7 @@
   <a href="https://github.com/ftpgrab/ftpgrab.github.io/actions"><img src="https://github.com/ftpgrab/ftpgrab.github.io/workflows/website/badge.svg" alt="Build Status"></a>
   <a href="https://www.codacy.com/app/ftpgrab/ftpgrab.github.io"><img src="https://img.shields.io/codacy/grade/20c303b459534d7ead9ae0c8d946bacd.svg?style=flat-square" alt="Code Quality"></a>
   <a href="https://stats.uptimerobot.com/Dq8NDcDg4"><img src="https://img.shields.io/uptimerobot/ratio/m778918924-2d17f3bbdfe6405f84c20a72.svg?style=flat-square" alt="Uptime"></a>
-  <br /><a href="https://www.patreon.com/crazymax"><img src="https://img.shields.io/badge/donate-patreon-fb664e.svg?style=flat-square" alt="Support me on Patreon"></a>
+  <br /><a href="https://github.com/sponsors/crazy-max"><img src="https://img.shields.io/badge/sponsor-crazy--max-181717.svg?logo=github&style=flat-square" alt="Become a sponsor"></a>
   <a href="https://www.paypal.me/crazyws"><img src="https://img.shields.io/badge/donate-paypal-7057ff.svg?style=flat-square" alt="Donate Paypal"></a>
 </p>
 
