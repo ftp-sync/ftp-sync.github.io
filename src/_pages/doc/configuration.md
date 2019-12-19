@@ -120,6 +120,8 @@ download:
 
 ## Mail
 
+> Example? Take a look at this [email report](/doc/faq/#what-type-of-email-report-is-sent-when-it-is-completed)
+
 ```yml
 notif:
   mail:
@@ -145,6 +147,21 @@ notif:
   * `from`: Sender email address. **required**
   * `to`: Recipient email address. **required**
 
+## Slack
+
+```yml
+notif:
+  slack:
+    enable: false
+    webhook_url: https://hooks.slack.com/services/ABCD12EFG/HIJK34LMN/01234567890abcdefghij
+```
+
+* `slack`
+  * `enable`: Enable slack notification (default: `false`).
+  * `webhook_url`: Slack [incoming webhook URL](https://api.slack.com/messaging/webhooks). **required**
+
+> Example? Take a look at this [Slack notification](/doc/faq/#what-does-a-slack-notification-look-like)
+
 ## Webhook
 
 ```yml
@@ -165,3 +182,5 @@ notif:
   * `method`: HTTP method (default: `GET`). **required**
   * `headers`: Map of additional headers to be sent.
   * `timeout`: Timeout specifies a time limit for the request to be made. (default: `10`).
+
+> Example? Take a look at this [webhook response](/doc/faq/#whats-the-structure-of-the-webhook-notification)

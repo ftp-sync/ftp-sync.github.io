@@ -56,7 +56,7 @@ Or use the following command:
 ```
 $ docker run -d --name ftpgrab \
   -e "TZ=Europe/Paris" \
-  -e "SCHEDULE=0 */30 * * * *" \
+  -e "SCHEDULE=*/30 * * * *" \
   -e "LOG_LEVEL=info" \
   -e "LOG_JSON=false" \
   -v "$(pwd)/db:/db:rw" \
@@ -71,3 +71,5 @@ To upgrade your installation to the latest release:
 docker-compose pull
 docker-compose up -d
 ```
+
+> 💡 Want to be notified of new releases? Check out 🔔 [Diun (Docker Image Update Notifier)](https://github.com/crazy-max/diun){:target="_blank"} project!

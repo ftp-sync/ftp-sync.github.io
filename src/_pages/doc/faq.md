@@ -29,10 +29,10 @@ ftp|sftp:
 
 A CRON expression represents a set of times, using 6 space-separated fields.
 
-* `0 */30 * * * *` will launch a job every 30 minutes.
-* `15 * * * * *` will launch a job every 15 seconds.
+* `*/30 * * * *` will launch a job every 30 minutes.
+* `*/15 * * * * *` will launch a job every 15 seconds.
 
-More examples can be found on the [official library documentation](https://godoc.org/github.com/crazy-max/cron#hdr-CRON_Expression_Format){:target="_blank"}.
+More examples can be found on the [official library documentation](https://godoc.org/github.com/robfig/cron#hdr-CRON_Expression_Format){:target="_blank"}.
 
 ## What Regexp semantic is used to filter inclusions/exclusions?
 
@@ -120,11 +120,15 @@ An HTTP request is sent with a JSON format response that looks like :
 }
 ```
 
-## What type of report is sent when it is completed?
+## What type of email report is sent when it is completed?
 
-Here is a mail sample:
+Here is an email sample if you add `mail` notification:
 
 ![](/img/faq/ftpgrab-report-email.png)
+
+## What does a Slack notification look like?
+
+![](/img/faq/ftpgrab-report-slack.png)
 
 ## How can I edit/remove some entries in the database?
 

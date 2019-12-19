@@ -22,6 +22,7 @@ sidebar: doc
 * Translate modtimes on downloaded files
 * Beautiful email report
 * Webhook notification
+* Slack incoming webhook notification
 * Enhanced logging
 * Timezone can be changed
 
@@ -38,7 +39,7 @@ sidebar: doc
 * `--help` : Show help text and exit. _Optional_.
 * `--version` : Show version and exit. _Optional_.
 * `--config <path>` : FTPGrab Yaml configuration file. **Required**. (example: `ftpgrab.yml`).
-* `--schedule <cron expression>` : [CRON expression](https://godoc.org/github.com/crazy-max/cron#hdr-CRON_Expression_Format){:target="_blank"} to schedule FTPGrab. _Optional_. (example: `0 */30 * * * *`).
+* `--schedule <cron expression>` : [CRON expression](https://godoc.org/github.com/robfig/cron#hdr-CRON_Expression_Format){:target="_blank"} to schedule FTPGrab. _Optional_. (example: `*/30 * * * *`).
 * `--timezone <timezone>` : Timezone assigned to FTPGrab. _Optional_. (default: `UTC`).
 * `--log-level <level>` : Log level output. _Optional_. (default: `info`).
 * `--log-json` : Enable JSON logging output. _Optional_. (default: `false`).

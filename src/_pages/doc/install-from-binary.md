@@ -106,7 +106,7 @@ See how to create a [Linux service](/doc/linux-service/) to start FTPGrab automa
 ## 2. Running from command-line/terminal
 
 ```
-/usr/local/bin/ftpgrab --config /etc/ftpgrab/ftpgrab.yml --schedule "0 */30 * * * *"
+/usr/local/bin/ftpgrab --config /etc/ftpgrab/ftpgrab.yml --schedule "*/30 * * * *"
 ```
 
 # Updating to a new version
