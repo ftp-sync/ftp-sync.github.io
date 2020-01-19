@@ -26,7 +26,7 @@ server:
     password:
     sources:
       - /
-    timeout: 5
+    timeout: 5s
     disable_epsv: false
     tls: false
     insecure_skip_verify: false
@@ -39,7 +39,7 @@ server:
   * `user`: FTP username. **required**
   * `password`: FTP password. **required**
   * `sources`: List of sources paths to grab from FTP server. **required**
-  * `timeout`: Timeout for opening connections, sending control commands, and each read/write of data transfers (default: `5`).
+  * `timeout`: Timeout for opening connections, sending control commands, and each read/write of data transfers (default: `5s`).
   * `disable_epsv`: Disables EPSV in favour of PASV. This is useful in cases where EPSV connections neither complete nor downgrade to PASV successfully by themselves, resulting in hung connections (default: `false`).
   * `tls`: Use implicit FTP over TLS (default: `false`).
   * `insecure_skip_verify`: Controls whether a client verifies the server's certificate chain and host name (default: `false`).
@@ -58,7 +58,7 @@ server:
     key:
     sources:
       - /
-    timeout: 30
+    timeout: 30s
     max_packet_size: 32768
 ```
 
@@ -69,7 +69,7 @@ server:
   * `password`: SFTP password or passphrase if `key` is used.
   * `key`: Path to your private key to enable publickey authentication.
   * `sources`: List of sources paths to grab from SFTP server. **required**
-  * `timeout`: Timeout is the maximum amount of time for the TCP connection to establish. 0 means no timeout (default: `30`).
+  * `timeout`: Timeout is the maximum amount of time for the TCP connection to establish. `0s` means no timeout (default: `30s`).
   * `max_packet_size`: Sets the maximum size of the payload, measured in bytes (default: `32768`).
 
 # DB
@@ -173,7 +173,7 @@ notif:
     headers:
       Content-Type: application/json
       Authorization: Token123456
-    timeout: 10
+    timeout: 10s
 ```
 
 * `webhook`
@@ -181,6 +181,6 @@ notif:
   * `endpoint`: URL of the HTTP request. **required**
   * `method`: HTTP method (default: `GET`). **required**
   * `headers`: Map of additional headers to be sent.
-  * `timeout`: Timeout specifies a time limit for the request to be made. (default: `10`).
+  * `timeout`: Timeout specifies a time limit for the request to be made. (default: `10s`).
 
 > Example? Take a look at this [webhook response](/doc/faq/#whats-the-structure-of-the-webhook-notification)
