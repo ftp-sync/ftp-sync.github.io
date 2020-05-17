@@ -38,22 +38,20 @@ After getting the binary, it can be tested with `./ftpgrab --help` or moved to a
 
 ```
 $ ./ftpgrab --help
-usage: ftpgrab --config=CONFIG [<flags>]
+Usage: ftpgrab --config=STRING
 
-Grab your files periodically from a remote FTP or SFTP server easily. More info
-on https://ftpgrab.github.io
+Grab your files periodically from a remote FTP or SFTP server easily. More info:
+https://ftpgrab.github.io
 
 Flags:
-  --help               Show context-sensitive help (also try --help-long and
-                       --help-man).
-  --config=CONFIG      FTPGrab configuration file.
-  --schedule=SCHEDULE  CRON expression format.
-  --timezone="UTC"     Timezone assigned to FTPGrab.
-  --log-level="info"   Set log level.
-  --log-json           Enable JSON logging output.
-  --log-file=LOG-FILE  Add logging to a specific file.
-  --docker             Enable Docker mode.
-  --version            Show application version.
+  --help                Show context-sensitive help.
+  --version
+  --config=STRING       FTPGrab configuration file ($CONFIG).
+  --schedule=STRING     CRON expression format ($SCHEDULE).
+  --timezone="UTC"      Timezone assigned to FTPGrab ($TZ).
+  --log-level="info"    Set log level ($LOG_LEVEL).
+  --log-json            Enable JSON logging output ($LOG_JSON).
+  --log-file=STRING     Add logging to a specific file ($LOG_FILE).
 ```
 
 # Server configuration
@@ -106,7 +104,7 @@ See how to create a [Linux service](/doc/linux-service/) to start FTPGrab automa
 ## 2. Running from command-line/terminal
 
 ```
-/usr/local/bin/ftpgrab --config /etc/ftpgrab/ftpgrab.yml --schedule "*/30 * * * *"
+FTPGRAB_DB=/var/lib/ftpgrab/ftpgrab.db /usr/local/bin/ftpgrab --config /etc/ftpgrab/ftpgrab.yml --schedule "*/30 * * * *"
 ```
 
 # Updating to a new version

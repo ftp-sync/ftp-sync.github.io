@@ -82,7 +82,7 @@ db:
 
 * `db`
   * `enable`: Enable the database to audit files already downloaded (default: `true`).
-  * `path`: Path to database file. Flag `--docker` force this path to `/db/ftpgrab.db` (default: `ftpgrab.db`). **required if enabled**
+  * `path`: Path to database file. (default: `ftpgrab.db`). Env var `FTPGRAB_DB` overrides this value. **required if enabled**
 
 # Download
 
@@ -102,7 +102,7 @@ download:
 ```
 
 * `download`
-  * `output`: Output destination folder of downloaded files. Flag `--docker` force this path to `/download`. **required**
+  * `output`: Output destination folder of downloaded files. Env var `FTPGRAB_DOWNLOAD_OUTPUT` overrides this value. **required**
   * `uid`: Owner user applied to downloaded files. (default to caller)
   * `gid`: Owner group applied to downloaded files. (default to caller)
   * `chmod_file`: Permissions applied to files. (default: `0644`)
@@ -116,11 +116,9 @@ download:
 
 # Notif
 
-`notif` holds data necessary for notification configuration. You can enable the following notifiers :
+`notif` holds data necessary for notification configuration. You can enable the following notifiers:
 
 ## Mail
-
-> Example? Take a look at this [email report](/doc/faq/#what-type-of-email-report-is-sent-when-it-is-completed)
 
 ```yml
 notif:
@@ -146,6 +144,8 @@ notif:
   * `password`: SMTP password.
   * `from`: Sender email address. **required**
   * `to`: Recipient email address. **required**
+
+> Example? Take a look at this [email report](/doc/faq/#what-type-of-email-report-is-sent-when-it-is-completed)
 
 ## Slack
 

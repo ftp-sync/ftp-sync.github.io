@@ -86,7 +86,7 @@ Tue, 29 Jan 2019 22:25:51 CET INF Finished, total time spent: 1 minute 56 second
 
 ## What's the structure of the webhook notification?
 
-An HTTP request is sent with a JSON format response that looks like :
+An HTTP request is sent with a JSON format response that looks like:
 
 ```json
 {
