@@ -1,11 +1,11 @@
 <p align="center"><a href="https://ftpgrab.github.io" target="_blank"><img width="100" src="https://ftpgrab.github.io/img/logo.png"></a></p>
 
 <p align="center">
-  <a href="https://github.com/ftpgrab/ftpgrab.github.io/actions"><img src="https://github.com/ftpgrab/ftpgrab.github.io/workflows/website/badge.svg" alt="Build Status"></a>
+  <a href="https://github.com/ftpgrab/ftpgrab.github.io/actions?workflow=website"><img src="https://img.shields.io/github/workflow/status/ftpgrab/ftpgrab.github.io/website?label=website&logo=github&style=flat-square" alt="Build Status"></a>
   <a href="https://app.codacy.com/gh/ftpgrab/ftpgrab.github.io"><img src="https://img.shields.io/codacy/grade/012462f8395740e79b6419e894a2cdca.svg?style=flat-square" alt="Code Quality"></a>
   <a href="https://stats.uptimerobot.com/Dq8NDcDg4"><img src="https://img.shields.io/uptimerobot/ratio/m778918924-2d17f3bbdfe6405f84c20a72.svg?style=flat-square" alt="Uptime"></a>
   <br /><a href="https://github.com/sponsors/crazy-max"><img src="https://img.shields.io/badge/sponsor-crazy--max-181717.svg?logo=github&style=flat-square" alt="Become a sponsor"></a>
-  <a href="https://www.paypal.me/crazyws"><img src="https://img.shields.io/badge/donate-paypal-7057ff.svg?style=flat-square" alt="Donate Paypal"></a>
+  <a href="https://www.paypal.me/crazyws"><img src="https://img.shields.io/badge/donate-paypal-00457c.svg?logo=paypal&style=flat-square" alt="Donate Paypal"></a>
 </p>
 
 ## Prerequisites
